@@ -1,0 +1,651 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="img/yudanikecil.png" rel="shortcut icon">
+<title>Yudany Foundation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+.container {
+	padding: 35px 120px;	
+}
+.person {
+	border:10px solid transparent;
+	margin-bottom:25px;
+	width:80%;
+	height:80%;
+	opacity:0.7;	
+}
+.person:hover {
+	border-color:#f1f1f1;	
+}
+.carousel-inner img {
+	-webkit-filter:grayscale(90%);
+	filter:grayscale(90%); /*make all phots black and white*/
+	width:100%; /*Set width to 100%*/
+	margin:auto;	
+}
+.carousel-caption h3 {
+	color:#fff !important;	
+}
+@media (max-width:600px) {
+	.carousel-caption {
+		display:none; /*Hide the carousel text when the screen is less then 600 pixels wide*/	
+	}
+}
+.bg-1 {
+	background:#2d2d30;
+	color:#bdbdbd;	
+}
+.bg-1 h3 {
+	color:#fff;	
+}
+.bg-1 p {
+	font-style:italic;	
+}
+.list-group-item:first-child {
+	border-top-right-radius:0;
+	border-top-left-radius:0;	
+}
+.list-group-item:last-child {
+	border-bottom-right-radius:0;
+	birder-bottom-left-radius:0;	
+}
+.thumbnail {
+	padding:0 0 15px 0;
+	border:none;
+	border-radius:0;	
+}
+.thumbnail p {
+	margin-top:15px;
+	color:#555;	
+}
+.btn {
+	padding:10px 20px;
+	background-color:#333;
+	color:#f1f1f1;
+	border-radius:0;
+	transition: .2s;	
+}
+.btn:hover, .btn:focus {
+	border:1px solid #333;
+	background-color:#fff;
+	color:#000;	
+}
+.modal-header, h4, .close {
+	background-color:#333;
+	color:#fff !important;
+	text-align:center;
+	font-size:30px;	
+}
+.modal-header, .modal-body {
+	padding:40px 50px;	
+}
+.nav-tabs li a {
+	color:#777;	
+}
+#googleMap {
+	width:100%; /*Span the entire width of the screen*/
+	height:400px; /*Set the height to 400 pixels*/
+	-webkit-filter:grayscale(100%);
+	filter:grayscale(100%); /*Change the color of the map to black and white*/	
+}
+
+/*Add a dark background color with a little bit see-through*/
+.navbar {
+	magrin-bottom:0;
+	background-color:#CCC;
+	border:0;
+	font-size:11px !important;
+	letter-spacing:4px;
+	opacity:0,9	
+}
+
+/*Add a gray color to all navbar links*/
+.navbar li a, .navbar .navbar-brand {
+	color:#d5d5d5 !important;	
+}
+
+/*nav bar default*/
+.navbar-nav li a {
+	color:#333 !important;	
+}
+
+/*On hover, the links will turn white*/
+.navbar-nav li a:hover {
+	color:#fff !important;
+}
+
+/*The active link*/
+.navbar-nav li.active a {
+	color:#fff !important;
+	background-color:#29292c !important;	
+}
+
+/*Remove border color from the collapsible button*/
+.navbar-default .navbar-toggle {
+	border-color:transparent;	
+}
+
+/*dropdown*/
+.open .dropdown-toggle {
+	color:#fff;
+	background-color:#555 !important;	
+}
+
+/*dropdown links*/
+.dropdown-menu li a {
+	color:#000 !important;	
+}
+
+/*On hover, the dropdown links will turn red*/
+.dropdown-menu li a:hover {
+	background-color:red !important;	
+}
+
+/*Add a dark background color to the footer*/
+footer {
+	background-color:#2d2d30;
+	color:#f5f5f5;
+	padding:32px;	
+}
+footer a {
+	color:#f5f5f5;	
+}
+footer a:hover {
+	color:#777;
+	text-decoration:none;	
+}
+body {
+	font:400 15px/1.8 Lato, sans-serif;
+	color:#777;	
+}
+.navbar {
+	font-family:Montserrat, sans-serif;	
+}
+/* Overwrite default styles of  h3 and h4*/
+h3, h4 {
+	margin:10px 0 30px 0;
+	letter-spacing:10px;
+	font-size:20px;
+	color:#111;	
+	text-align:center;
+}
+/*Remove rounded borders on input fields*/
+.form-control {
+	border-radius:0;	
+}
+/*Disable the ability to resize textareas*/
+textarea {
+	resize:none;	
+}
+</style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+    	<div class="navbar-header">
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            	<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/logoyudany.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        	<ul class="nav navbar-nav navbar-right">
+            	<li><a href="whoweare.html">WHO WE ARE</a></li>
+                <li><a href="child.html">FOSTER CHILDREN</a></li>
+                <li><a href="prog.html">PROGRAM</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="waystogive.html">WAYS TO GIVE</a></li>
+                <li class="dropdown">
+                <!--	<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    	<li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>-->
+                <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav><!---end navbar--->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!---indicators--->
+    <ol class="carousel-indicators">
+    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    
+    <!---Wrapper for slides--->
+    <div class="carousel-inner" role="listbox">
+    	<div class="item active">
+        	<img src="img/yudany1.jpg" width="1600" height="500">
+            <!--<div class="carousel-caption">
+            	<h3>New York</h3>
+                <p>The atmosphere in New York is awesome</p>
+            </div>-->
+        </div>
+        
+        <div class="item">
+    		<img src="img/paper_people_hires1.jpg" alt="stockholm" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Stockholm</h3>
+            	<p>Thank you, Stockholm - A night we won't forget.</p>
+        	</div>-->
+    	</div>
+    
+    	<div class="item">
+    		<img src="img/yudany.jpg" alt="milan" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Milan</h3>
+            	<p>Eve though the traffic was a mess, we had the best time playing at san siro stadium</p>
+        	</div>-->
+    	</div>
+    
+    	<div class="item">
+    		<img src="img/michelangelo1.jpg" alt="studio" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>London</h3>
+            	<p>when we need take a breath</p>
+        	</div>-->
+    	</div>
+    
+    	<div class="item">
+    		<img src="img/yudany2.jpg" alt="fix you" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Paris</h3>
+            	<p>Turn light on and you'll find the path</p>
+        	</div>-->
+    	</div>
+    </div>
+    
+    <!---left and right controls--->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+	</a>
+</div><!---end Carousel--->
+
+<!---Container (who we are)--->
+<div class="container">
+    <div class="row">
+    	<div class="col-sm-3">
+        	<ul class="nav nav-pills nav-stacked">
+            	<li>
+                	<a class="dropdown-toggle" href="whoweare.html">Hessu Profile</a>
+                    <!--<ul class="dropdown-menu">
+                    	<li><a href="#">History</a></li>
+                        <li><a href="#">Vision, Mission, and Objectives</a></li>
+                        <li><a href="#">Legalities</a></li>
+                        <li><a href="#">Location Map</a></li>
+                    </ul>-->
+                </li>
+                <li class="active">
+                	<a class="dropdown-toggle" href="disable.html">Disabilities</a>
+                    <!--<ul class="dropdown-menu">
+                    	<li><a href="discelebral.html" title="">Cerebral Palsy</a></li>
+   						<li><a href="disautism.html" title="">Autism</a></li>
+    					<li><a href="dismental.html" title="">Mental Retardation</a></li>
+    					<li><a href="disspeech.html" title="">Speech Impaired &amp; Visually Impaired Person</a></li>
+                    </ul>-->
+                </li>
+                <li>
+                	<a class="dropdown-toggle" href="board.html">Board and Professional</a>
+                    <!--<ul class="dropdown-menu">
+                    	<li><a href="board.html" title="">Board</a></li>
+    					<li><a href="prof.html" title="">Professionals</a></li>
+    					<li><a href="organ.html" title="">Organization</a></li>
+                    </ul>-->
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+        	<ul class="nav nav-tabs">
+    			<li class="active"><a data-toggle="tab" href="#home">Cerebral Palsy</a></li>
+        		<li><a data-toggle="tab" href="#menu1">Autism</a></li>
+        		<li><a data-toggle="tab" href="#menu2">Mental Retardation</a></li>
+                <li><a data-toggle="tab" href="#menu3">Speech &amp; Visually Impaired Person</a></li>
+    		</ul>
+    
+    		<div class="tab-content text-justify">
+    			<div id="home" class="tab-pane fade in active">
+        			<h2>Cerebral Palsy</h2>
+                    <p>
+                	Cerebral Palsy (CP) merupakan kondisi terganggunya fungsi otak besar, bisa dikatakan juga kelumpuhan otak besar. Otak besar merupakan pusat koordinasi seluruh aktivitas keseharian manusia, seperti melihat, mendengar, berbicara, kemampuan berpikir, belajar dan sebagainya. Sehingga jika pusat koordinasi tersebut mengalami gangguan, maka kemampuan untuk melakukan aktivitas keseharian juga akan terganggu<br>
+                	</p>
+                	<p>
+                	Penyandang CP akan kesulitan mengontrol bagian tubuhnya, dari mulai motorik halus hingga motorik kasar, seperti mengunyah, menelan, memegang benda, bahkan berjalan. Ototnya sulit berkoordinasi dengan otak, sehingga penyandang CP sering terlihat mengeluarkan air liur, dan kekakuan dalam bergerak. <br>
+                	</p>
+                	<p>
+                	Penyebab CP hingga saat ini belum dapat dipastikan, namun faktor-faktor berikut dapat meningkatkan resiko anak menyandang CP:<br><br>
+					<strong>a.	Faktor Prenatal (Sebelum Kelahiran/Persalinan)</strong><br>
+						-	Ibu mengkonsumsi obat secara berlebihan<br>
+						-	Terjadinya infeksi saat masa kehamilan, seperti rubella, toksoplasma, atau infeksi virus lainnya.<br>
+						-	Ibu mengalami benturan/jatuh.<br><br>
+					<strong>b.	Faktor Natalitas (Saat Kelahiran/Persalinan)</strong><br>
+						-	Bayi lahir prematur<br>
+						-	Persalinan dengan vakum<br>
+						-	Kekurangan oksigen saat lahir<br>
+						-	Keracunan air ketuban<br><br>
+					<strong>c.	Faktor Postnatal (Setelah Kelahiran/Persalinan)</strong><br>
+						-	Mengalami benturan/jatuh<br>
+						-	Terkena virus, seperti meningitis<br>
+						-	Infeksi otak<br>
+						-	Anak kejang berulang<br>
+					<br>
+                	</p>
+                	<p>
+                	<img src="img/cp.jpg">
+                	</p><br>
+                	<p>
+                	<strong>1.	TIPE SPASTIK:</strong><br>
+						A.	Hemiplegia<br>
+						Hemiplegia/hemiparesis- suatu kerusakan yg mengakibatkan lengan maupun tungkai yg satu sisi terlihat lemah atau lumpuh<br><br>
+
+						B.	Diplegia<br>
+						Diplegia /diparesis – suatu keadaan dimana gangguan ada di anggota gerak bawah (tungkai) sementara lengan dan tangan terlihat normal.<br><br>
+
+						C.	Quadriplegia<br>                                                                    
+						Quadriplegia/quadriparese- artinya semua anggota gerak lemah / layu<br><br>
+
+					<strong>2.	TIPE DISKENETIK:</strong> <br>                                                                   
+						A.	Distonia<br>
+						Distonia , permasalahan lebih kearah otot-otot postur / batang tubuh dibandingkan anggota gerak, postur yg memelintir/ memutar.<br><br>
+
+						B.	Athetoid<br>
+						atetoid termasuk dalam cp yang dominan permasalahan gerakan involuntary (tidak terkontrol, tidak disadari), terutama lengan, tungkai dan tangan.<br><br>
+
+					<strong>3.	TIPE ATAXIC :</strong><br>
+					
+					Ataxia berimbas pada penurunan kemampuan gerakan terkoordinasi. Keseimbangan dan postur tubuh juga terlibat. Pola berjalan dengan tungkai melebar dan kadang-kadang tidak teratur. Kontrol gerakan mata dan kedalaman persepsi sering terganggu. Seringkali, keterampilan motorik halus yang memerlukan koordinasi mata dan tangan, seperti menulis, akan sulit dilakukan.
+                	</p>
+        		</div>
+        		<div id="menu1" class="tab-pane fade">
+        			<h2>Autism</h2>
+                	<p>
+                Autisme adalah kelainan perkembangan sistem saraf pada seseorang yang kebanyakan diakibatkan oleh faktor hereditas dan kadang-kadang telah dapat dideteksi sejak bayi berusia 6 bulan. Deteksi dan terapi sedini mungkin akan menjadikan si penderita lebih dapat menyesuaikan dirinya dengan yang normal.<br><br>
+                	</p>
+                
+                	<h3>Gejala Autisme</h3>
+                	<p>
+					Gejala-gejala autisme dapat muncul pada anak mulai dari usia 30 bulan sejak kelahiran hingga usia maksimal 3 tahun. Seorang dikatakan menderita autisme apabila mengalami satu atau lebih dari karakteristik berikut:<br>
+					1.	Kesulitan dalam berhubungan dengan orang lain atau obyek di sekitarnya serta menghubungkan peristiwa-peristiwa yang terjadi<br>
+					2.	Kesulitan dalam berkomunikasi secara kualitatif, misal: berbicara dan memahami Bahasa<br>
+					3.	Bermain dengan mainan atau benda-benda lain secara tidak wajar<br>
+					4.	Sulit menerima perubahan pada rutinitas dan lingkungan yang dikenali<br>
+					5.	Gerakan tubuh yang berulang-ulang atau adanya pola-pola perilaku yang tertentu<br>
+					6.	Mengalami perkembangan yang terlambat atau tidak normal.
+					<br>
+                	</p>
+                
+                	<h3>Penyebab Autisme</h3>
+                	<p>
+Hingga kini apa yang menyebabkan seseorang dapat menderita autisme belum diketahui secara pasti. Riset-riset yang dilakukan oleh para ahli medis menghasilkan beberapa hipotesa mengenai penyebab autisme. Dua hal yang diyakini sebagai pemicu autisme adalah faktor genetik atau keturunan dan faktor lingkungan seperti pengaruh zat kimiawi ataupun vaksin.<br>
+
+Faktor genetik diyakini memiliki peranan yang besar bagi penyandang autisme walaupun tidak diyakini sepenuhnya bahwa autisme hanya dapat disebabkan oleh gen dari keluarga. Riset yang dilakukan terhadap anak autistik menunjukkan bahwa kemungkinan dua anak kembar identik mengalami autisme adalah 60 hingga 95% sedangkan kemungkinan untuk dua saudara kandung mengalami autisme hanyalah 2,5 hingga 8,%. Hal ini diinterpretasikan sebagai peranan besar gen sebagai penyebab autisme sebab anak kembar identik memiliki gen yang 100% sama sedangkan saudara kandung hanya memiliki gen yang 50% sama.<br>
+Ada dugaan bahwa autisme disebabkan oleh vaksin MMR yang rutin diberikan kepada anak-anak di usia dimana gejala-gejala autisme mulai terlihat. Kekhawatiran ini disebabkan karena zat kimia bernama thimerosal yang digunakan untuk mengawetkan vaksin tersebut mengandung merkuri. Unsur merkuri inilah yang selama ini dianggap berpotensi menyebabkan autisme pada anak. Namun, tidak ada bukti kuat yang mendukung bahwa autisme disebabkan oleh pemberian vaksin. Penggunaan thimerosal dalam pengawetan vaksin telah diberhentikan namun angka autisme pada anak semakin tinggi.
+					<br>
+                	</p>
+                
+                	<h3>Terapi Autisme</h3>
+                	<p>
+Beberapa jenis terapi bersifat tradisional dan telah teruji dari waktu ke waktu sementara terapi lainnya mungkin baru saja muncul. Tidak seperti gangguan perkembangan lainnya, tidak banyak petunjuk treatment yang telah dipublikasikan apalagi prosedur yang standar dalam menangani autisme. Bagaimanapun juga para ahli sependapat bahwa terapi harus dimulai sejak awal dan harus diarahkan pada hambatan maupun keterlambatan yang secara umum dimiliki oleh setiap anak autis, misalnya; komunikasi dan persoalan-persolan perilaku. Treatment yang komprehensif umumnya meliputi; Terapi Wicara (Speech Therapy), Okupasi Terapi (Occupational Therapy) dan Applied Behavior Analisis (ABA) untuk mengubah serta memodifikasi perilaku.<br>
+
+Berikut ini adalah suatu uraian sederhana dari berbagai literatur yang ada dan ringkasan penjelasan yang tidak menyeluruh dari beberapa treatment yang diakui saat ini. Menjadi keharusan bagi orang tua untuk mencari tahu dan mengenali treatment yang dipilihnya langsung kepada orang-orang yang profesional dibidangnya. Sebagian dari teknik ini adalah program menyeluruh, sedang yang lain dirancang menuju target tertentu yang menjadi hambatan atau kesulitan para penyandangnya.<br>
+1.	Educational Treatment, meliputi tetapi tidak terbatas pada: Applied Behavior Analysis (ABA) yang prinsip-prinsipnya digunakan dalam penelitian Lovaas sehingga sering disamakan dengan Discrete Trial Training atau Intervensi Perilaku Intensif.<br>
+2.	Pendekatan developmental yang dikaitkan dengan pendidikan yang dikenal sebagai Floortime.<br>
+3.	TEACCH (Treatment and Education of Autistic and Related Communication – Handicapped Children).<br>
+4.	Biological Treatment, meliputi tetapi tidak terbatas pada: diet, pemberian vitamin dan pemberian obat-obatan untuk mengurangi perilaku-perilaku tertentu (agresivitas, hiperaktif, melukai diri sendiri, dsb.).<br>
+5.	Speech – Language Therapy (Terapi Wicara), meliputi tetapi tidak terbatas pada usaha penanganan gangguan asosiasi dan gangguan proses auditory/pendengaran.<br>
+6.	Komunikasi, peningkatan kemampuan komunikasi, seperti PECS (Picture Exchange Communication System), bahasa isyarat, strategi visual menggunakan gambar dalam berkomunikasi dan pendukung-pendukung komunikasi lainnya.<br>
+7.	Pelayanan Autisme Intensif, meliputi kerja team dari berbagai disiplin ilmu yang memberikan intervensi baik di rumah, sekolah maupun lingkungan sosial lainnya.<br>
+8.	Terapi yang bersifat Sensoris, meliputi tetapi tidak terbatas pada Occupational Therapy (OT), dan Auditory Integration Training (AIT).
+					<br>
+                	</p>
+        		</div>
+        		<div id="menu2" class="tab-pane fade">
+        			<h2>Mental Retardation</h2>
+                <p>
+                Tunagrahita adalah keadaaan keterbelakangan mental, keadaan ini dikenal juga retardasi mental (mental retardation). Tunagrahita sering disepadankan dengan istilah-istilah, sebagai berikut:<br>
+                <ol>
+                	<li>Lemah pikiran (Feeble Minded)</li>
+                    <li>Terbelakang mental (Mentally Retarded)</li>
+                    <li>Bodoh atau dungu (Idiot)</li>
+                    <li>Pandir (Imbecile)</li>
+                    <li>Tolol (Moron)</li>
+                    <li>Oligofrenia (Oligophrenia)</li>
+                    <li>Mampu Didik (Educable)</li>
+                    <li>Mampu Latih (Trainable)</li>
+                    <li>Ketergantungan penuh (Totally Dependent) atau butuh rawat</li>
+                    <li>Mental Subnormal</li>
+                    <li>Defisit Mental</li>
+                    <li>Defisit Kognitif</li>
+                    <li>Cacat Mental</li>
+                    <li>Defisiensi Mental</li>
+                    <li>Gangguan Intelektual</li>
+                </ol>
+				<br>
+                </p>
+                
+                <h3>Klasifikasi Tunagrahita</h3>
+                <p>
+               	Klasifikasi anak tunagrahita menurut Mulyono Abdurrahman (1994:24) sebagai berikut:<br>
+                <ul>
+                	<li>Klasifikasi Medis-Biologis</li>
+                </ul>
+                <p>Menurut pandangan medis, tunagrahita dipandang sebagai akibat dari beberapa penyakit atau kondisi yang tidak sempurna. Menurut Grosmman Ettel yang dikutip Mulyono Abddurahman (1994:24) mempunyai daftar etiologis penyakit sebagai berikut:</p>
+                <ol>
+                	<li>Akibat infeksi/intixikasi</li>
+                    <li>Akibat ruda paksa/sebab fisik lain</li>
+                    <li>Akibat penyakit otak yang nyata</li>
+                    <li>Akibat gangguan metabolism</li>
+                    <li>Akibat penyakit prenatal yang tidak diketahui</li>
+                    <li>Akibat kelainan kromosom</li>
+                    <li>Gangguan waktu kehamilan</li>
+                    <li>Pengaruh lingkungan</li>
+                    <li>Akibat kondisi lain yang tidak tergolongkan</li>
+                </ol><br>
+                <ul>
+                	<li>Klasifikasi Sosial-Psikologis</li>
+                </ul>
+                <p>Klasifikasi Sosial-Psikologis menggunakan kriteria psikomotorik dan perilaku adaptif. Ada 4 retardasi mental menurut skala intelegensi Wechsler, yaitu:</p>
+                <ol>
+                	<li>Retardasi mental ringan IQ 55-69</li>
+                    <li>Retardasi mental sedang IQ 40-54</li>
+                    <li>Retardasi mental berat IQ 25-39</li>
+                    <li>Retardasi mental sangat berat IQ 24 kebawah</li>
+                </ol>
+                <br>
+                <ul>
+                	<li>Klasifikasi untuk keperluan pembelajaran</li>
+                </ul>
+				<p>Ada 4 kelompok perbedaan untuk keperluan pembelajaran, yaitu:</p>
+                <ol>
+                	<li>Taraf pembatasan atau lamban belajar</li>
+                    <li>Tunagrahita mampu didik</li>
+                    <li>Tunagrahita mampu latih</li>
+                    <li>Tunagrahita mampu rawat dengan IQ 30 kebawah</li>
+                </ol>
+				
+				<br>
+                </p>
+                
+                <h3>Penyebab Tunagrahita</h3>
+                <p>
+                Penyebab tunagrahita menurut Mulyono Abdurrahman (1994:30), ada beberapa faktor penyebab antara lain:<br>
+				<strong>1.	Faktor Genetik</strong><br>
+					a.	Kerusakan Biokimia<br>
+					b.	Abnormalitas Kromosomal<br><br>
+				<strong>2.	Sebab-sebab pada masa prenatal</strong><br>
+					a.	Infeksi Rubella (cacar)<br>
+					b.	Faktor Rhisus (Rh)<br><br>
+				<strong>3.	Sebab-sebab pada natal</strong><br>
+					Pada saat kelahiran sesak nafas, luka pada saat kelahiran prematuritas. Kerusakan otak sesak nafas karena kekurangan oksigen.<br><br>
+				<strong>4.	Sebab-sebab pada masa postnatal</strong><br>
+					Penyakit akibat infeksi dan problem nutrisi. Penyakit encephalitis (suatu pandangan sistem saraf pusat yang disebabkan oleh virus tertentu) dan meningitis (kondisi yang berasal dari infeksi bakteri yang menyebabkan peradangan pada selaput otak dan dapat menimbulkan kerusakan pada sistem saraf pusat)<br><br>
+				<strong>5.	Sosiokultural</strong>
+				<br><br>
+                </p>
+                
+                <h3>Karakteristik Tunagrahita</h3>
+                <p>
+                <strong>1.	Tunagrahita ringan</strong><br>
+					Anak dengan karakterisitik tunagrahita ringan banyak yang lancar berbicara tetapi kurang perbendaharaan kata, mengalami kesukaran berfikir abstrak tetapi masih mampu mengikuti kegiatan akademik dalam batas-batas tertentu. Pada umur 16 tahun baru mencapai umur kecerdasan yang sama dengan umur 12 tahun.<br><br>
+				<strong>2.	Tunagrahita sedang</strong><br>
+					Anak dengan karakteristik tunagrahita sedang hampir tidak bisa mengikuti pelajaran-pelajaran akademik, mereka umumnya dilatih untuk merawat diri dan aktifitas sehari-hari. Pada umur dewasa baru mencapai tingkat kecerdasan yang sama dengan anak berusia 7 tahun.<br><br>
+				<strong>3.	Tunagrahita berat dan sangat berat</strong><br>
+					Anak dengan karakterisitik tunagrahita berat dan sangat berat sepanjang hidupnya selalu tergantung pada pertolongan dan bantuan orang lain. Mereka tidak dapat memelihara diri, tidak dapat membedakan bahaya, kurang dapat bercakap-cakap, kecerdasannya hanya dapat berkembang paling tinggi seperti anak normal berusia 3-4 tahun. Karakteristik anak tunagrahita menurut Departemen Pendidikan dan Kebudayaan dalam proyek pusat pengembangan guru tertulis tahun 1995-1996 ada 7 karakteristik, yaitu:<br>
+					a.	Penampilan fisik yang tidak seimbang (kepala terlalu kecil atau besar)<br>
+					b.	Selalu mengeluarkan air liur dan tampak bengong<br>
+					c.	Tidak dapat mengurus diri sesuai dengan usia<br>
+					d.	Perkembangan bicara atau bahasa terlambat<br>
+					e.	Tidak ada atau kurang sekali perhatian terhadap lingkungan<br>
+					f.	Koordinasi gerakan kurang, gerakan tidak terkendali<br>
+					g.	Perkembangan fungsi penglihatan, kemampuan berfikir lambat
+                </p>
+        		</div>
+                <div id="menu3" class="tab-pane fade">
+                	<h2>Speech &amp; Visually Impaired Person</h2>
+                    <strong>Pengertian Tunawicara</strong><br>
+                <p>
+Bisu atau disebut pula dengan tunawicara dan gangguan bicara, adalah ketidakmampuan seseorang untuk bicara. Bisu disebabkan oleh gangguan pada organ-organ seperti tenggorokan, pita suara, paru-paru, mulut, lidah dan sebagainya. Bisu umumnya dikatikan dengan tuli. Bayi terlahir tuli dan bisu dapat disebabkan oleh berbagai faktor. Bisa terjadi akibat faktor genetika (keturunan, perkawinan antar kerabat yang terlalu dekat, seperti antara sepupu kandung, sehingga terjadi mutasi gen yang tidak wajar. Selain itu, kurang atau tidak berfungsinya organ pendengaran, keterlambatan perkembangan bahasa, kerusakan pada sistem saraf dan struktur otot, serta ketidakmampuan dalam kontrol gerak juga dapat mengakibatkan keterbatasan dalam berbicara. Penyebab lainnya adalah cacat intelektual dan autisme. Seseorang dapat lahir bisu, atau menjadi bisu di kemudian hari karena cedera atau penyakit.<br><br>
+				</p>
+				<strong>Gejala Tunawicara</strong>
+
+				<ol>
+                	<li>Berbicara keras dan tidak jelas</li>
+                    <li>Suka melihat gerak bibir atau gerak tubuh teman bicaranya</li>
+                    <li>Telinga mengeluarkan cairan</li>
+                    <li>Menggunakan alat bantu dengar</li>
+                    <li>Bibir sumbing</li>
+                    <li>Suka melakukan gerakan tubuh</li>
+                    <li>Cenderung pendiam</li>
+                    <li>Suara sengau</li>
+                    <li>Cadel</li>
+                </ol>
+				<br>
+				<strong>Penyebab Tunawicara</strong>
+                <p>
+Data dari Badan Kesehatan Dunia (WHO) menyebutkan bahwa satu dari seribu bayi yang lahir mengalami tuli (tunarungu) dan bisu (tunawicara) dan hampir 50% kondisi tuli dan bisu tersebut dialami oleh anak-anak karena faktor keturunan. Namun adapun penyebab lainnya adalah karena trauma atau cedera pada daerah broca di bagian otak.<br><br>
+                </p>
+                
+                <strong>Pengertian Tunanetra</strong>
+                <p>
+Tunanetra adalah istilah umum yang digunakan untuk kondisi seseorang yang mengalami gangguan atau hambatan dalam indra penglihatannya. Berdasarkan tingkat gangguannya Tunanetra dibagi dua yaitu buta total (total blind) dan yang masih mempunyai sisa penglihatan (Low Vision). Alat bantu untuk mobilitasnya bagi tuna netra dengan menggunakan tongkat khusus, yaitu berwarna putih dengan ada garis merah horisontal. Akibat hilang/berkurangnya fungsi indra penglihatannya maka tunanetra berusaha memaksimalkan fungsi indra-indra yang lainnya seperti, perabaan, penciuman, pendengaran, dan lain sebagainya sehingga tidak sedikit penyandang tunanetra yang memiliki kemampuan luar biasa misalnya di bidang musik atau ilmu pengetahuan.<br><br>
+				</p>
+				<strong>Karakteristik Tunanetra</strong>
+				<ol>
+                	<li>
+                    Fisik: Keadan fisik anak tunanetra tidak berbeda dengan anak sebaya lainnya.perbedaan nyata diantaranya mereka hanya terdapat pada organ penglihatannya. Gejala tunanetra yang dapat diamati dari segi fisik antara lain: mata juling, sering berkedip, menyipitkan mata, kelopak mata merah, gerakan mata tak beraturan dan cepat, mata selalu berair dan sebagainya.
+                    </li>
+                    <li>
+                    Perilaku: Beberapa gejala tingkah laku pada anak yang mengalami gangguan penglihatan dini antara lain; berkedip lebih banyak dari biasanya. menyipitkan mata, tidak dapat melihat benda-benda yang agak jauh.Adanya keluhan-keluhan antara lain : mata gatal, panas, pusing, kabur atau penglihatan ganda.
+                    </li>
+                    <li>
+                    Psikis: Tidak berbeda jauh dengan anak normal. Kecenderungan IQ anak tunanetra ada pda batas atas sampai batas bawah. Kadangkala ada keluarga yang belum siap menerima anggota keluarga yang tuna netra sehingga menimbulkan ketegangan/gelisah di antara keluarga. Seorang tunanetra biasanya mengalami hambatan kepribadian seperti curiga terhadap orang lain, perasaan mudah tersinggung dan ketergantungan yang berlebihan.
+                    </li>
+                </ol>
+<br>
+Penurunan penglihatan (Low vision)
+				<ol>
+                	<li>
+                    Menulis dan membaca dengan jarak yang sangat dekat
+                    </li>
+                    <li>
+                    Hanya dapat membaca huruf yang berukuran besar
+                    </li>
+                    <li>
+                    Memicingkan mata atau mengerutkan kening terutama di cahaya terang atau saat mencoba melihat sesuatu.
+                    </li>
+                </ol>
+<br>
+				<strong>Penyebab Tunanetra</strong>
+                <ol>
+                	<li>
+                    Pre-natal: Faktor penyebab ketunanetraan pada masa pre-natal Sangat erat hubungannya dengan masalah keturunan dan pertumbuhan seorang anak dalam kandungan
+                    </li>
+                    <li>
+                    Post-natal: Faktor penyebab ketunanetraan yang terjadi pada masa post-natal dapat terjadi sejak atau setelah bayi lahir, antara lain: kerusakan pada mata atau syaraf mata pada waktu persalinan hamil ibu menderita penyakit gonorrhoe, penyakit mata lain yang menyebabkan ketunanetraan, seperti trachoma,dan akibat kecelakaan.
+                    </li>
+                </ol>
+<br>
+				<strong>Teknologi Pendukung</strong>
+				<p>
+Perkembangan teknologi informasi saat ini telah banyak digunakan untuk membantu para tunanetra. Penggunaan program seperti JAWS (pembaca layar) membuat pengoperasian komputer menjadi dimungkinkan oleh para tunanetra. Kegiatan membaca buku yang sebelumnya tidak mungkin dilakukan oleh tunanetra selain menggunakan huruf braille, kini dapat dilakukan dengan bantuan alat pemindai (scanner). Dengan menggunakan perangkat tersebut pada komputer yang telah dilengkapi dengan piranti lunak pembaca layar, pengguna cukup meletakkan buku di atas kaca pemindai dan program akan langsung membacanya dari teks yang direproduksi oleh komputer.
+
+                </p>
+                </div>
+    		</div>
+        </div>
+    </div>
+</div><!---end container who we are--->
+<!---footer--->
+<footer class="text-center">
+	<a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To TOP">
+    	<span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p>
+    	Yayasan Heesu "Cahaya Cinta"<br>
+		Desa Situsari Kampung Tunggilis<br> 
+		No. 150 RT 02/07<br>
+		Kecamatan Cileungsi<br> 
+		Kabupaten Bogor, 16280<br>
+		Ph: +62 21 527 5556, +62 21 899 411 92<br>
+		E-mail: <span class="link"><a href="mailto:admin@yudanyfoundation.org">&nbsp;&nbsp;admin@yudanyfoundation.org</a></span>
+    </p>
+    <p>
+    	Yudany Foundation | &copy; 2015
+    </p>
+    <p>Design <a href="#" data-toggle="tooltip" title="visit muza's design"> By Muza's</a></p>
+</footer><!---end footer--->
+
+<script>
+$(document).ready(function(){
+	// Initializa Tooltip
+	$('[data-toggle="tooltip"]').tooltip();
+	
+	//Add smooth scrolling to all links in navbar + footer link
+	$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+		
+		//Prevent default anchor click behavior
+		//event.preventDefault();
+		
+		//Store hash
+		var hash = this.hash;
+		
+		//Using jQuery's animate() method to add smooth page scroll
+		//The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top
+		}, 900, function(){
+			
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		});
+	});
+})
+</script>
+
+</body>
+</html>

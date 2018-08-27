@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="img/yudanikecil.png" rel="shortcut icon">
+<title>Yudany Foundation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+.container {
+	padding: 35px 120px;	
+}
+.person {
+	border:10px solid transparent;
+	margin-bottom:25px;
+	width:80%;
+	height:80%;
+	opacity:0.7;	
+}
+.person:hover {
+	border-color:#f1f1f1;	
+}
+.carousel-inner img {
+	-webkit-filter:grayscale(90%);
+	filter:grayscale(90%); /*make all phots black and white*/
+	width:100%; /*Set width to 100%*/
+	margin:auto;	
+}
+.carousel-caption h3 {
+	color:#fff !important;	
+}
+@media (max-width:600px) {
+	.carousel-caption {
+		display:none; /*Hide the carousel text when the screen is less then 600 pixels wide*/	
+	}
+}
+.bg-1 {
+	background:#2d2d30;
+	color:#bdbdbd;	
+}
+.bg-1 h3 {
+	color:#fff;	
+}
+.bg-1 p {
+	font-style:italic;	
+}
+.list-group-item:first-child {
+	border-top-right-radius:0;
+	border-top-left-radius:0;	
+}
+.list-group-item:last-child {
+	border-bottom-right-radius:0;
+	birder-bottom-left-radius:0;	
+}
+.thumbnail {
+	padding:0 0 15px 0;
+	border:none;
+	border-radius:0;	
+}
+.thumbnail p {
+	margin-top:15px;
+	color:#555;	
+}
+.btn {
+	padding:10px 20px;
+	background-color:#333;
+	color:#f1f1f1;
+	border-radius:0;
+	transition: .2s;	
+}
+.btn:hover, .btn:focus {
+	border:1px solid #333;
+	background-color:#fff;
+	color:#000;	
+}
+.modal-header, h4, .close {
+	background-color:#333;
+	color:#fff !important;
+	text-align:center;
+	font-size:30px;	
+}
+.modal-header, .modal-body {
+	padding:40px 50px;	
+}
+.nav-tabs li a {
+	color:#777;	
+}
+#googleMap {
+	width:100%; /*Span the entire width of the screen*/
+	height:400px; /*Set the height to 400 pixels*/
+	-webkit-filter:grayscale(100%);
+	filter:grayscale(100%); /*Change the color of the map to black and white*/	
+}
+
+/*Add a dark background color with a little bit see-through*/
+.navbar {
+	magrin-bottom:0;
+	background-color:#CCC;
+	border:0;
+	font-size:11px !important;
+	letter-spacing:4px;
+	opacity:0,9	
+}
+
+/*Add a gray color to all navbar links*/
+.navbar li a, .navbar .navbar-brand {
+	color:#d5d5d5 !important;	
+}
+
+/*nav bar default*/
+.navbar-nav li a {
+	color:#333 !important;	
+}
+
+/*On hover, the links will turn white*/
+.navbar-nav li a:hover {
+	color:#fff !important;
+}
+
+/*The active link*/
+.navbar-nav li.active a {
+	color:#fff !important;
+	background-color:#29292c !important;	
+}
+
+/*Remove border color from the collapsible button*/
+.navbar-default .navbar-toggle {
+	border-color:transparent;	
+}
+
+/*dropdown*/
+.open .dropdown-toggle {
+	color:#fff;
+	background-color:#555 !important;	
+}
+
+/*dropdown links*/
+.dropdown-menu li a {
+	color:#000 !important;	
+}
+
+/*On hover, the dropdown links will turn red*/
+.dropdown-menu li a:hover {
+	background-color:red !important;	
+}
+
+/*Add a dark background color to the footer*/
+footer {
+	background-color:#2d2d30;
+	color:#f5f5f5;
+	padding:32px;	
+}
+footer a {
+	color:#f5f5f5;	
+}
+footer a:hover {
+	color:#777;
+	text-decoration:none;	
+}
+body {
+	font:400 15px/1.8 Lato, sans-serif;
+	color:#777;	
+}
+.navbar {
+	font-family:Montserrat, sans-serif;	
+}
+/* Overwrite default styles of  h3 and h4*/
+h3, h4 {
+	margin:10px 0 30px 0;
+	letter-spacing:10px;
+	font-size:20px;
+	color:#111;	
+	text-align:center;
+}
+/*Remove rounded borders on input fields*/
+.form-control {
+	border-radius:0;	
+}
+/*Disable the ability to resize textareas*/
+textarea {
+	resize:none;	
+}
+</style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+    	<div class="navbar-header">
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            	<span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/logoyudany.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        	<ul class="nav navbar-nav navbar-right">
+            	<li><a href="whoweare.html">WHO WE ARE</a></li>
+                <li><a href="child.html">FOSTER CHILDREN</a></li>
+                <li class="active"><a href="prog.html">PROGRAM</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="waystogive.html">WAYS TO GIVE</a></li>
+                <li class="dropdown">
+                <!--	<a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    	<li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>-->
+                <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav><!---end navbar--->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!---indicators--->
+    <ol class="carousel-indicators">
+    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    
+    <!---Wrapper for slides--->
+    <div class="carousel-inner" role="listbox">
+    	<div class="item active">
+        	<img src="img/yudany1.jpg" width="1600" height="500">
+            <!--<div class="carousel-caption">
+            	<h3>New York</h3>
+                <p>The atmosphere in New York is awesome</p>
+            </div>-->
+        </div>
+        
+        <div class="item">
+    		<img src="img/paper_people_hires1.jpg" alt="stockholm" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Stockholm</h3>
+            	<p>Thank you, Stockholm - A night we won't forget.</p>
+        	</div>-->
+    	</div>
+    
+    	<div class="item">
+    		<img src="img/yudany.jpg" alt="milan" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Milan</h3>
+            	<p>Eve though the traffic was a mess, we had the best time playing at san siro stadium</p>
+        	</div>-->
+    	</div>
+    
+    	<div class="item">
+    		<img src="img/michelangelo1.jpg" alt="studio" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>London</h3>
+            	<p>when we need take a breath</p>
+        	</div>-->
+    	</div>
+    
+    	<div class="item">
+    		<img src="img/yudany2.jpg" alt="fix you" width="1600" height="500">
+        	<!--<div class="carousel-caption">
+        		<h3>Paris</h3>
+            	<p>Turn light on and you'll find the path</p>
+        	</div>-->
+    	</div>
+    </div>
+    
+    <!---left and right controls--->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+	</a>
+</div><!---end Carousel--->
+
+<!---Container (The Band Section)--->
+<div id="band"class="container text-justify">
+	<h2>Program</h2>
+                	<h3>Therapies</h3>
+                    <ul>
+                    	<li>Fisioterapi</li>
+                    </ul>
+                    <p>Fisioterapi merupakan ilmu yang menitikberatkan untuk menstabilkan atau memperbaiki gangguan fungsi alat gerak/fungsi tubuh yang terganggu yang kemudian diikuti dengan proses/metode terapi gerak.
+Menurut Keputusan Menteri Kesehatan Republik Indonesia No.778 Tahun 2008 tentang Pedoman Pelayanan Fisioterapi di Sarana Kesehatan, fisioterapi adalah suatu pelayanan kesehatan yang ditujukan untuk individu dan atau kelompok dalam upaya mengembangkan, memelihara, dan memulihkan gerak dan fungsi sepanjang daur kehidupan dengan menggunakan modalitas fisik, agen fisik, mekanis, gerak, dan komunikasi. Fisioterapi dapat melatih pasien dengan olahraga khusus, penguluran dan bermacam-macam teknik dan menggunakan beberapa alat khusus untuk mengatasi masalah yang dihadapi pasien yang tidak dapat diatasi dengan latihan–latihan fisioterapi.
+					</p><br>
+                    <ul>
+                    	<li>Okupasi Terapi</li>
+                    </ul>
+                    <p>
+                    Terapi Okupasi adalah bentuk layanan kesehatan kepada masyarakat atau pasien yang mengalami gangguan fisik dan atau mental dengan menggunakan latihan/aktivitas mengerjakan sasaran yang terseleksi(okupasi) untuk meningkatkan kemandirian individu pada area aktivitas kehidupan sehari-hari, produktivitas dan pemanfaatan waktu luang dalam rangka meningkatkan derajat kesehatan masyarakat. Tujuan utama dari Okupasi Terapi adalah memungkinkan individu untuk berperan serta dalam aktivitas keseharian. Okupasi terapis mencapai tujuan ini melalui kerja sama dengan kelompok dan masyarakat untuk meningkatkan kemampuan mereka untuk terlibat dalam aktivitas yang mereka inginkan, butuhkan, atau harapkan untuk dikerjakan, serta dengan mengubah aktivitas atau lingkungan yang lebih baik untuk mendukung keterlibatan dalam aktivitas.
+                    </p><br>
+                    <ul>
+                    	<li>Terapi Wicara</li>
+                    </ul>
+                    <p>
+                    Terapi wicara adalah terapi untuk membantu seseorang menguasai komunikasi bicara dengan lebih baik. Terapi ini biasa diberikan kepada:
+                    </p>
+                    <ul>
+                    	<li>Anak-anak yang mengalami keterlambatan bicara (speech delay). Ini merupakan salah satu hambatan tumbuh kembang yang paling umum dialami anak, di mana seorang anak masih belum mencapai kemampuan bicara yang semestinya sudah dikuasai pada usia tertentu. Tentu sebab dari keadaan ini bisa bermacam-macam, dan harus melalui proses 'screening' untuk bisa mengevaluasi sebab dan solusinya.</li>
+                        <li>Anak-anak dan orang dewasa yang baru selesai menjalani operasi celah bibir (cleft lip/sumbing) dan celah langit-langit (cleft palate). Dengan perubahan anatomi sistem bicara, pasien post operasi celah bibir dan langit-langit sangat penting untuk menjalani terapi wicara untuk mendapatkan hasil yang optimal dari operasi tersebut.</li>
+                        <li>Anak-anak dengan hambatan tumbuh kembang khusus (autisma, down syndrome, tuna rungu, cerebral palsy)</li>
+                        <li>Anak-anak/orang dewasa yang mengalami gangguan bicara lainnya : gagap (stuttering), cadel, dll.</li>
+                        <li>pasien stroke terkadang kehilangan kemampuan bicara, dan terapi wicara bisa membantu pasien melatih kemampuan bicaranya lagi</li>
+                    </ul>
+                    <br>
+                    <h3>Special Education</h3>
+                    <p>
+                    <strong>PLB (Pendidikan Luar Biasa)</strong><br>
+                    Pembelajaran yang dirancang untuk merespon atau memenuhi kebutuhan anak dengan karakteristik yang unik dan tidak dapat dipenuhi oleh kurikulum sekolah yang standar (biasa). Pengertian Pendidikan Luar Biasa bila dioperasionalkan di lapangan dapat diartikan sebagai Kelas Khusus, program khusus dan atau layanan khusus yang dirancang untuk memenuhi kebutuhan pendidikan Anak Luar Biasa.
+                    </p><br>
+                    <h3>Nursery</h3>
+                    <ol>
+                    	<li>Pemberian Multivitamin</li>
+                        <p>
+                        Memberikan berbagai multivitamin kepada semua anak khususnya yang dalam kondisi kurang fit.
+                        </p>
+                        <li>Peningkatan Gizi</li>
+                        <p>
+                        Melakukan program peningkatan gizi bagi anak-anak yang mengalami kekurangan gizi dan melakukan pemantauan terhadap program tersebut.
+                        </p>
+                        <li>Terapi/Penyembuhan Kejang</li>
+                        <p>
+                        Melakukan terapi atau pengobatan rutin untuk anak yang mengalami kejang.
+                        </p>
+                        <li>Penanganan Penyakit</li>
+                        <p>
+                        Pengobatan untuk anak-anak yang terserang penyakit seperti batuk, pilek, demam dan sebagainya.
+                        </p>
+                    </ol><br>
+                    <h3>Competency Development</h3>
+                    <p>
+                    <strong>PLB (Pendidikan Luar Biasa)</strong><br>
+Pembelajaran yang dirancang untuk merespon atau memenuhi kebutuhan anak dengan karakteristik yang unik dan tidak dapat dipenuhi oleh kurikulum sekolah yang standar (biasa). Pengertian Pendidikan Luar Biasa bila dioperasionalkan di lapangan dapat diartikan sebagai Kelas Khusus, program khusus dan atau layanan khusus yang dirancang untuk memenuhi kebutuhan pendidikan Anak Luar Biasa.
+					</p>             <br>       
+                    <h3>Social Relationship</h3>
+                    <ul>
+                    	<li><strong>OPEN HOUSE YAYASAN HEESU WITH THOMAS HUIS STEENWIJK 2014</strong></li>
+                        <p>
+                        Thomas Huis Steenwijk adalah sebuah organisasi berupa rumah perawatan untuk para penyandang disabilitas di Belanda. Melalui salah satu anggota American Women Association, Diane White memperkenalkan Yayasan Heesu kepada Mrs. Henriette Koenen (Baju Hitam paling kanan) yang merupakan salah satu pengurus dari Thomas Huis. Setelah berdiskusi dengan pengurus Thomas Huis lainnya, akhirnya beliau membawa kabar baik untuk membantu Yayasan Heesu. <br>
+Thomas Huis memberikan donasi setiap bulannya untuk menunjang sebagian operasional yayasan. Mereka pun tertarik dengan program tahunan Yayasan Heesu untuk juga memberikan bantuan kepada masyarakat sekitar yang membutuhkan. Karena masyarakat juga merupakan keluarga besar Yayasan Heesu yang patut diberikan penghargaan atas kebaikan mereka yang juga sudah mengganggap Yayasan Heesu sebagai bagian dari Desa Situsari. <br>
+Setelah berdiskusi dengan Mrs. Henriette Koenen, kami sepakat untuk menyelenggarakan open house dengan mengundang masyarakat sekitar dan menyajikan jajanan gratis, pembagian sembako gratis serta panggung sederhana untuk menampilkan kebolehan anak-anak dan karyawan Yayasan Heesu serta juga mengundang dan menampilkan pertunjukan artis cilik Sasha. Acara tersebut diselenggarakan pada tanggal 22 Februari 2014, segenap pengurus Thomas Huis dari Belanda datang langsung untuk menyaksikan acara open house tersebut. Selain dihadiri oleh para tamu asing, pengurus Yayasan Heesu dari PT. Jaya Samudera Karunia juga turut menghadiri Yayasan Heesu.  <br><br>
+                        </p>
+                        <li><strong>CHARITY EVENT OF THOMAS HUIS STEENWIJK</strong></li>
+                        <p>
+                        Thomas Huis Steenwijk adalah sebuah organisasi berupa rumah perawatan untuk para penyandang disabilitas di Belanda dan telah membantu Yayasan Heesu sejak tahun 2013. Sejak tahun pertamanya menjadi donatur Yayasan Heesu, Thomas Huis telah menyelenggarakan beberapa kegiatan sosial untuk masyarakat sekitar. Setelah tahun sebelumnya Thomas Huis menyelenggarakan open house Yayasan Heesu untuk masyarakat sekitar. Tahun 2015 ini, Thomas Huis mengadakan pembagian sembako gratis bagi masyarakat sekitar dan karyawan Yayasan Heesu. Hal ini sebagai bentuk penghargaan bagi masyarakat dan karyawan karena selama ini telah membantu Yayasan Heesu dalam merawat anak-anak penyandang disabilitas.<br><br>
+                        </p>
+                        <li><strong>SEOUL CHAMBER SOCIETY OF SOUTH KOREA</strong></li>
+                        <p>
+                        Seoul Chamber Society (SCS) merupakan grup musik orksetra yang berasal dari Korea Selatan. Mereka terdiri dari para pemusik professional ber-genre klasik. Kedatangan SCS merupakan serangkaian dari Korea Festival yang diselenggarakan oleh Korea Foundation. Saat itu, Yayasan Heesu menjadi salah satu yayasan yang dipilih dan dihubungi oleh pihak Korea Foundation untuk menjadi tempat pegelaran orksetra sederhana sebagai bentuk social charity dalam serangkaian acara Korea Festival tahun 2013. Acara ini juga dihadiri oleh perwakilan pengurus Yayasan Heesu, PT. Jaya Samudera Karunia.<br><br>
+                        </p>
+                        <li><strong>IDUL ADHA QURBAN</strong></li>
+                        <p>
+                        Setiap tahunnya, Yayasan Heesu memiliki program untuk berbagi kepada masyarakat sekitar yang membutuhkan. Dalam rangka Hari Raya Idul Adha, Yayasan Heesu selalu mengadakan kegiatan kurban dan paket daging kurban langsung dibagikan kepada masyarakat sekitar. Hewan kurban yang terdiri dari kambing maupun sapi berasal dari para donatur yang ingin berkurban, dan kegiatan pemotongan dilakukan oleh pemuka agama dan tokoh masyarakat setempat.<br><br>
+                        </p>
+                        <li><strong>PENGOBATAN GRATIS KEPADA MASYARAKAT BEKERJASAMA DENGAN HILAL AHMAR</strong></li>
+                        <p>
+                        Yayasan Heesu juga selalu menyisihkan program tahunannya untuk masyarakat sekitar. Selain mengadakan kurban, pembagian sembako gratis, kami juga berusaha untuk memberikan pengobatan secara gratis bagi masyarakat yang membutuhkan. Tahun 2013 ini, yayasan heesu bekerjasama dengan Organisasi Hilal Ahmar Jakarta dan Baitul Maal Abdirrahman bin Auf Cabang Jakarta dalam memberikan pengobatan gratis bagi masyarakat. Tim pengobatan terdiri dari dokter dan pihak yang berhubungan dengan medis lainnya bekerjasama dengan karyawan yayasan heesu salah satunya adalah perawat yayasan heesu.
+                        </p>
+                    </ul>
+</div><!---end container text center--->
+<!---footer--->
+<footer class="text-center">
+	<a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To TOP">
+    	<span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p>
+    	Yayasan Heesu "Cahaya Cinta"<br>
+		Desa Situsari Kampung Tunggilis<br> 
+		No. 150 RT 02/07<br>
+		Kecamatan Cileungsi<br> 
+		Kabupaten Bogor, 16280<br>
+		Ph: +62 21 527 5556, +62 21 899 411 92<br>
+		E-mail: <span class="link"><a href="mailto:admin@yudanyfoundation.org">&nbsp;&nbsp;admin@yudanyfoundation.org</a></span>
+    </p>
+    <p>
+    	Yudany Foundation | &copy; 2015
+    </p>
+    <p>Design <a href="#" data-toggle="tooltip" title="visit muza's design"> By Muza's</a></p>
+</footer><!---end footer--->
+
+<script>
+$(document).ready(function(){
+	// Initializa Tooltip
+	$('[data-toggle="tooltip"]').tooltip();
+	
+	//Add smooth scrolling to all links in navbar + footer link
+	$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+		
+		//Prevent default anchor click behavior
+		//event.preventDefault();
+		
+		//Store hash
+		var hash = this.hash;
+		
+		//Using jQuery's animate() method to add smooth page scroll
+		//The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top
+		}, 900, function(){
+			
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		});
+	});
+})
+</script>
+
+</body>
+</html>
